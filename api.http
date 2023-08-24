@@ -1,13 +1,13 @@
 GET http://localhost:3000/
 
 ###
-GET http://localhost:3000/categories
+GET http://localhost:3000/sample/
 
 ###
-GET http://localhost:3000/categories/41
+GET http://localhost:3000/sample/41
 
 ###
-POST http://localhost:3000/categories
+POST http://localhost:3000/sample
 Content-Type: application/json
 
 {
@@ -16,7 +16,7 @@ Content-Type: application/json
 }
 
 ### UPDATE
-PATCH http://localhost:3000/categories/16
+PATCH http://localhost:3000/sample/16
 Content-Type: application/json
 
 {
@@ -25,4 +25,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/categories/16
+DELETE http://localhost:3000/sample/16
