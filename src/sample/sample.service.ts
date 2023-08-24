@@ -1,15 +1,19 @@
 import { Injectable } from '@nestjs/common';
 import { CreateSampleDto } from './dto/create-sample.dto';
 import { UpdateSampleDto } from './dto/update-sample.dto';
+import { PrismaService } from 'src/prisma/prisma/prisma.service';
 
 @Injectable()
 export class SampleService {
+
+   constructor(private prismaService: PrismaService) {}
+
   create(createSampleDto: CreateSampleDto) {
     return 'This action adds a new sample';
   }
 
   findAll() {
-    return `This action returns all sample`;
+    return this.prismaService.sample.findMany();
   }
 
   findOne(id: number) {
