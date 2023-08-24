@@ -13,11 +13,12 @@ datasource db {
 model Sample{
   id Int @id @default(autoincrement())
   description String @db.VarChar(255)
-  sampleOfSample SampleOfSample [] // List of SampleOfSamples related as sample_id bellow
+  sampleOfSample SampleOfSample[] // List of SampleOfSamples related as sample_id bellow
 }
 
 model SampleOfSample {
   id Int @id @default(autoincrement())
+  description String @db.VarChar(255)
   sample Sample @relation(fields: [sample_id], references: [id])
   sample_id Int
 }
