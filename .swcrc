@@ -1,0 +1,17 @@
+{
+    "$schema": "https://json.schemastore.org/nest-cli",
+    "sourceMaps": true,
+    "jsc": {
+        "parser": {
+            "syntax": "typescript",
+            "decorators": true,
+            "dynamicImports": true
+        },
+        "transform": {
+            "legacyDecorators": true,
+            "decoratorMetadata": true
+        },
+        "baseUrl": "./"
+    },
+    "minify": false
+}
