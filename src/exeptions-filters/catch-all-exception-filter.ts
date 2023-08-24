@@ -9,7 +9,7 @@ export class CatchAllErrosExceptionFilter extends BaseExceptionFilter {
         // return super.catch(exception, host);
         
         const context = host.switchToHttp();
-        const response = context.getResponse();
+        const response = exception.getResponse();
 
         // default response
         return response.status(500).json({

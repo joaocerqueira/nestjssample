@@ -11,7 +11,7 @@ export class PrismaExceptionFilter implements ExceptionFilter {
         if(exception.code == 'P2025') {
             return response.status(404).json({
                 statusCode: 404,
-                message: "Custom status code: 500",
+                message: "Custom status code: 404 P2025",
                 //message: exception.message,
             })
         } 
