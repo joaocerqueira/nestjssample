@@ -9,7 +9,10 @@ export class SampleService {
    constructor(private prismaService: PrismaService) {}
 
   create(createSampleDto: CreateSampleDto) {
-    return 'This action adds a new sample';
+    /*return 'createSample'*/
+    return this.prismaService.sample.create({
+      data: createSampleDto,
+    });
   }
 
   findAll() {
@@ -17,14 +20,24 @@ export class SampleService {
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} sample`;
+    //throw new MyXptoException();
+    return this.prismaService.sample.findUniqueOrThrow({
+      where: {
+        id: id,
+      },
+    });
   }
 
   update(id: number, updateSampleDto: UpdateSampleDto) {
-    return `This action updates a #${id} sample`;
+    return this.prismaService.sample.update({
+      where: { id },
+      data: updateSampleDto,
+    });
   }
 
   remove(id: number) {
-    return `This action removes a #${id} sample`;
+    return this.prismaService.sample.delete({
+      where: { id },
+    });
   }
 }

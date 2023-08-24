@@ -1,1 +1,3 @@
-export class CreateSampleDto {}
+export class CreateSampleDto {
+    description: string;
+}

@@ -3,26 +3,24 @@ GET http://localhost:3000/
 ###
 GET http://localhost:3000/sample/
 
-###
-GET http://localhost:3000/sample/41
+### bad ID for custom exception message testing
+GET http://localhost:3000/sample/22
 
 ###
 POST http://localhost:3000/sample
 Content-Type: application/json
 
 {
-"name": "Name",
-"description": "Description"
+"description": "new sample POST"
 }
 
 ### UPDATE
-PATCH http://localhost:3000/sample/16
+PATCH http://localhost:3000/sample/1
 Content-Type: application/json
 
 {
-"name": "new name",
-"description": "new description"
+"description": "updated sample"
 }
 
 ###
-DELETE http://localhost:3000/sample/16
+DELETE http://localhost:3000/sample/2
